@@ -11,9 +11,9 @@ s.connect((socket.gethostname(), 1234))
 
 full_msg = ''
 while True:
-    msg = s.recv(8)
-    if len(msg) <= 0:
-        break
+    msg = s.recv(1024)
+    if len(msg) <= 0:c
+    break
     full_msg += msg.decode("utf-8")
 
     if len(full_msg) > 0:
